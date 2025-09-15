@@ -61,5 +61,4 @@ validation steps you can run locally:
 2. Use an HTML validator (for example https://validator.w3.org/) and a CSS validator to confirm standards compliance.
 3. Optionally run Lighthouse in Chrome to inspect accessibility, performance, and best practices.
 
-[Live link]:(https://archatitocodes.github.io/plp-webtechnologies-classroom-july2025-july-2025-final-project-and-deployment-Final-Project-and-Depl/)
-
+* **Live Demo:** [🔗 STEPHEN ODHIAMBO PORTFOLIO WEB PAGE] https://archatitocodes.github.io/plp-webtechnologies-classroom-july2025-july-2025-final-project-and-deployment-Final-Project-and-Depl/
