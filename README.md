@@ -1,90 +1,64 @@
-# 📦 Final Assignment: Build, Organize, and Deploy a Multipage Website
+# Eng. Stephen Odhiambo – Portfolio
 
-You're now ready to bring everything together—HTML, CSS, JavaScript, planning, structure, and deployment. This final project challenges you to **conceptualize, build, and deploy a multi-page website** that is responsive, interactive, and ready for the real world.
+This repository contains a static multi-page portfolio scaffold for Eng. Stephen Odhiambo. It includes basic HTML, CSS and JavaScript to serve as a starting point. Replace the placeholder images and the CV in `images/` with your real assets.
 
-This assignment will guide you from planning your site all the way to deploying it online. Let’s make your project *production-worthy*! 🚀
+Files added:
 
----
+- `index.html`, `about.html`, `projects.html`, `contact.html`, `blog.html` — pages
+- `css/style.css`, `css/responsive.css` — styles
+- `js/main.js`, `js/form-validation.js` — interactions
+- `images/` — reference directory for images and CV (add your files here)
 
-## 🌐🎯 Part 1: Planning and Organizing a Multipage Website
+Note: This scaffold now references live images and icons from public CDNs (Unsplash for photos and Simple Icons for language logos). You can keep these links (they hotlink assets from the web) or replace them by adding your own files into the local `images/` directory and updating the image src attributes.
 
-Before you write any code, take time to plan:
+How to use:
 
-* Define your website's purpose (portfolio, product showcase, blog, etc.)
-* Outline 3–5 pages (e.g., Home, About, Services, Contact, Gallery)
-* Sketch or describe the layout of each page
-* Map out internal navigation (how pages link to one another)
+1. Open `index.html` in a browser. No build step required.
+2. Replace files under `images/` (profile photo `atito.jpg`, social icons `github.jpg`, `Lkn2.jpg`, project screenshots, and `STEPHEN ODHIAMBO CV.pdf`).
 
-**Goal:** Show intentional structure and user journey across the site.
+Notes / next steps:
 
----
+- Add real images and the PDF to `images/`.
+- Improve accessibility, add ARIA labels to modals and forms as needed.
+- Optionally wire the contact form to a server or form service (Netlify Forms, Formspree, etc.).
 
-## 🌍💻 Part 2: Build the Website Using HTML5, CSS, and JavaScript
+Changelog (automated fixes applied):
 
-Using your plan, begin building:
+- Fixed multiple HTML issues (typos, duplicate alt attribute on hero image, added explicit input type on contact form).
+- Corrected CSS syntax errors and removed a duplicated reset block to avoid conflicting global styles.
+- Fixed small layout typos (footer flex), added missing semicolons in CSS.
+- Wrapped main JS initialization in DOMContentLoaded to avoid race conditions.
 
-* Use HTML5 for semantic structure
-* Apply CSS for responsive layout, styling, and animations
-* Use JavaScript to add interactivity (menus, forms, toggles, dynamic content)
+Run locally (recommended):
 
-Each page should:
+- Using Python 3 (works on Windows PowerShell):
 
-* Be mobile-responsive
-* Share a consistent layout/header/footer
-* Include at least one interactive element (e.g., form validation, toggle menu, animation on scroll)
+```powershell
+# from the project root
+python -m http.server 8000; # then open http://localhost:8000 in your browser
+```
 
-**Goal:** Integrate everything you’ve learned in a cohesive, functioning project.
+- Or use VS Code Live Server extension and open the workspace root then "Open with Live Server".
 
----
+If you want, I can also:
 
-## 🛠️🚀 Part 3: Best Practices for Code Organization
+- Add simple validation UI for the contact form (error messages near inputs).
+- Replace external CDN icons with local fallbacks.
+- Run a basic accessibility/contrast pass and add aria attributes where helpful.
 
-Before deployment, refactor your project to follow production-friendly practices:
+Vanilla confirmation & validation
+---------------------------------
 
-* Organize files in folders (`/css`, `/js`, `/images`, etc.)
-* Write clean, modular, and commented code
-* Use meaningful file names and relative paths
-* Validate your HTML/CSS and test on different screen sizes
+This project uses only vanilla web technologies: static HTML5, plain CSS3, and plain JavaScript (ES6). No bundlers, no frameworks, no preprocessors were used. The following quick checks were run during the last update:
 
-**Goal:** Prepare your codebase to be readable, maintainable, and scalable.
+- Searched the repository for `package.json`, TypeScript (`.ts`), SCSS (`.scss`) and tooling keywords (vite, webpack, rollup, parcel, react, vue) — none found.
+- Per-file reads of `js/main.js` and `js/form-validation.js` confirmed they use only standard DOM APIs and no external JS libraries.
+- CSS files (`css/style.css`, `css/responsive.css`) were validated for syntax errors — none found.
 
----
+Next validation steps you can run locally:
 
-## 🌐🚀 Part 4: Introduction to Hosting and Deployment
+1. Start a local static server and visit the site across breakpoints (360, 412, 768, 1024, 1366, 1920, 2560).
+2. Use an HTML validator (for example https://validator.w3.org/) and a CSS validator to confirm standards compliance.
+3. Optionally run Lighthouse in Chrome to inspect accessibility, performance, and best practices.
 
-Once your project is complete, choose a method to **host your site online**.
 
-You can use:
-
-* **GitHub Pages** (great for portfolios and static sites)
-* **Netlify** (powerful CI/CD features and easy form support)
-* **Vercel** (lightning-fast deployment for frontend projects)
-
-Deploy your project and confirm that:
-
-* All links and scripts work
-* It loads properly on mobile and desktop
-* It has a clear, shareable URL
-
-**Goal:** Publish your work online and make it accessible to the world.
-
----
-
-## Deliverables
-
-1. A GitHub repository containing:
-
-   * Your complete project code, properly organized
-   * A `README.md` file explaining your project purpose, structure, and live URL
-2. A live deployed website (hosted via GitHub Pages, Netlify, or Vercel)
-
----
-
-## Outcome
-
-* Clarity and thoroughness of planning documentation
-* Proper use of HTML5, CSS, and JavaScript across multiple pages
-* Responsive and accessible design
-* Clean, well-organized, and commented code
-* Successful live deployment with a working link
-* Evidence of following best practices

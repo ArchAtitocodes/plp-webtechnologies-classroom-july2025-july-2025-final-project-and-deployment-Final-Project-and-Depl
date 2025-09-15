@@ -1,0 +1,23 @@
+/* Additional responsive tweaks */
+@media (max-width:600px){
+  .name{font-size:1.25rem}
+  .hero-image img{width:clamp(120px, 40vw, 180px);height:auto}
+  /* Make portrait smaller on mobile and avoid overlapping hero text */
+  .profile-portrait{ width:clamp(90px, 18vw, 140px); top:64px; right:8px }
+  .home .hero-text{ width:100%; margin-left:0; padding:0.6rem }
+}
+
+/* Ensure nav toggle is visible on small screens and hide full nav */
+@media (max-width:800px){
+  #nav-toggle{display:inline-block}
+  .main-nav{display:none}
+  .main-nav[aria-expanded="true"]{display:block}
+  .header-inner{gap:.5rem}
+}
+
+/* Extra-large displays (24" and above) */
+@media (min-width:2000px){
+  .container{max-width:clamp(1400px, 70vw, 1800px);padding:clamp(1.5rem, 2.2vw, 2.5rem)}
+  .name{font-size:clamp(2.4rem, 2.6vw, 4rem)}
+  .hero-image img{width:clamp(420px, 36vw, 880px);height:auto}
+}
