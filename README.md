@@ -7,7 +7,7 @@ Files added:
 - `index.html`, `about.html`, `projects.html`, `contact.html`, `blog.html` — pages
 - `css/style.css`, `css/responsive.css` — styles
 - `js/main.js`, `js/form-validation.js` — interactions
-- `images/` — reference directory for images and CV (add your files here)
+- `images/` — reference directory for images, notes and CV.
 
 Note: This scaffold now references live images and icons from public CDNs (Unsplash for photos and Simple Icons for language logos). You can keep these links (they hotlink assets from the web) or replace them by adding your own files into the local `images/` directory and updating the image src attributes.
 
@@ -55,10 +55,11 @@ This project uses only vanilla web technologies: static HTML5, plain CSS3, and p
 - Per-file reads of `js/main.js` and `js/form-validation.js` confirmed they use only standard DOM APIs and no external JS libraries.
 - CSS files (`css/style.css`, `css/responsive.css`) were validated for syntax errors — none found.
 
-Next validation steps you can run locally:
+validation steps you can run locally:
 
 1. Start a local static server and visit the site across breakpoints (360, 412, 768, 1024, 1366, 1920, 2560).
 2. Use an HTML validator (for example https://validator.w3.org/) and a CSS validator to confirm standards compliance.
 3. Optionally run Lighthouse in Chrome to inspect accessibility, performance, and best practices.
 
+[Live link]:(https://archatitocodes.github.io/plp-webtechnologies-classroom-july2025-july-2025-final-project-and-deployment-Final-Project-and-Depl/)
 
