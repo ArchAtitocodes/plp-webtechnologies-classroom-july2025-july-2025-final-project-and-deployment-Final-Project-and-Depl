@@ -30,9 +30,10 @@
   }
 
   // Animate the primary page heading instead of typing effect
-  const heading = document.querySelector('.hero .name, main h1');
+  // We select only h1 tags inside main, excluding the homepage hero heading.
+  const heading = document.querySelector('main > h1');
   if(heading){
-    heading.classList.add('animate-heading');
+    if (!document.body.classList.contains('home')) heading.classList.add('animate-heading');
   }
 
   // Typing animation for home H1 (two-line). Accessible and respects reduced-motion.

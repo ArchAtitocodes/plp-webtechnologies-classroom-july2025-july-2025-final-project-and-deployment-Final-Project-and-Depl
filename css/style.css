@@ -90,8 +90,8 @@ body{
 }
 
 /* Layout the two H1 lines side-by-side on larger screens */
-.home .name .line{d
-  isplay:block
+.home .name .line{
+  display:block
 }
 .home .name .line-1{
   margin-right:1rem
@@ -136,8 +136,8 @@ body{
     padding: left 2px;;
     /* use a safe width that allows the rotated H1 to sit to the left without overflow */
     flex-basis: 48%;
-    width: 48%;
-    max-width: 60%;
+    width: 40%;
+    max-width: 40%;
   }
 
   /* avoid overlapping the fixed portrait on very wide screens by increasing the safe offset */
@@ -166,10 +166,11 @@ body{
 .profile-portrait{
   position:fixed;
   top:76px;right:16px; 
-  z-index:50;
-  width:clamp(150px,22vw,280px);
+  z-index:30;
+  width: 33.33vw; /* A third of the viewport width */
   height:auto;
-  aspect-ratio:3/4;object-fit:cover;
+  max-width: 550px; /* Set a max-width to prevent it from being too large */
+  object-fit:cover;
   border-radius:14px;
   border:6px solid rgba(255,255,255,0.95);
   box-shadow:0 18px 54px rgba(9,30,66,0.18);
@@ -798,8 +799,8 @@ body{
 @media (min-width:1600px){
   :root{ --max-width:1800px }
   .hero{min-height:72vh}
-  .hero-text{max-width:42%}
-  .profile-portrait{ width:300px; top:96px; right:32px }
+  .hero-text{max-width:38%}
+  .profile-portrait{ width:500px; top:96px; right:32px }
 }
 
 @media (min-width:1101px) and (max-width:1599px){
@@ -830,25 +831,12 @@ body{
     width:20px;height:20px
   }
 }
-@media (max-width:900px){
-  .profile-portrait{
-    top:68px;
-    right:12px;
-    width:160px
-  }
-}
-@media (max-width:600px){
-  .profile-portrait{
-    top:64px;
-    right:10px;
-    width:140px
-  }
-}
-@media (max-width:800px){
-  #nav-toggle{display:inline-block}
-  .main-nav{display:none}
-  .main-nav[aria-expanded="true"]{display:block}
-  .header-inner{gap:.5rem}
+
+/* Extra-large displays (24" and above) */
+@media (min-width:2000px){
+  .container{max-width:clamp(1400px, 70vw, 1800px);padding:clamp(1.5rem, 2.2vw, 2.5rem)}
+  .name{font-size:clamp(2.4rem, 2.6vw, 4rem)}
+  .hero-image img{width:clamp(420px, 36vw, 880px);height:auto}
 }
 
 /* Improve contact map visibility: responsive height with large cap */
@@ -856,6 +844,11 @@ body{
   height: clamp(420px, 55vh, 2700px) !important;
   min-height:420px;
   display:block;
+  border: 0;
 }
-
-/* duplicate basic reset & layout removed to avoid conflicts; primary globals defined at top */
+@media (max-width:800px){
+  #nav-toggle{display:inline-block}
+  .main-nav{display:none}
+  .main-nav[aria-expanded="true"]{display:block}
+  .header-inner{gap:.5rem}
+}
